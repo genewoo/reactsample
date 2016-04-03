@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta content="True" name="HandheldFriendly">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Magic Mirror</title>
+    <!-- <link rel="stylesheet" href="examples/shared/css/base.css" /> -->
+    <style type="text/css">
+    body {
+      background: #000;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 0;
+      padding: 30px;
+    }
+    .body {
+      background: #000;
+    }
+    .container {
+      background-color: black;
+    }
+    .circle {
+      width: 240px;
+      height: 240px;
+      position: relative;
+      border: 12px solid #00FF00;
+      border-radius: 50%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      /* background: url(http://i.imgur.com/LQ4S51k.png); */
+      background-size: 240px 240px;
+      background-repeat: no-repeat;
+    }
+
+    .face {
+      width: 100%;
+      height: 100%;
+    }
+
+    .face:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 12px;
+      height: 12px;
+      margin: -6px 0 0 -6px;
+      background: #777;
+      border-radius: 6px;
+      content: "";
+      display: block;
+    }
+
+
+    .hour {
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -4px 0 -4px -25%;
+      padding: 4px 0 4px 25%;
+      background: #FFF;
+      transform-origin: 100% 50%;
+    }
+
+    .minute {
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -40% -3px 0;
+      padding: 40% 3px 0;
+      background: #FFF;
+      transform-origin: 50% 100%;
+    }
+
+    .second {
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -40% -1px 0 0;
+      padding: 40% 1px 0;
+      background: #D40000;
+      transform-origin: 50% 100%;
+    }
+    </style>
+  </head>
+  <body class="body">
+    <div id="container" class="container-fluid"></div>
+    <script src="https://fb.me/react-0.14.8.min.js"></script>
+    <script src="https://fb.me/react-dom-0.14.8.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- <script src="build/browser.min.js"></script> -->
+
+    <!-- <script src="build/moment.min.js"></script> -->
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- <script src="bootstrap/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
+    <!-- <script type="text/babel" src="src/helloworld.js"></script> -->
+    <script src="lib/clock.js"></script>
+  </body>
+</html>
